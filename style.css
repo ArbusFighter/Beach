@@ -1,0 +1,280 @@
+
+/* Stil für den gesamten Body */
+body {
+  display: grid;
+  grid-template-columns: 1fr 960px 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    ". g-header ."
+    ". g-nav ."
+    ". g-main ."
+    ". g-aside ."
+    ". g-footer .";
+  height: 100vh;
+  font-family: 'MeineGedownloadeteSchrift', sans-serif;
+  font-size: 12pt;
+}
+
+/* Schriftimport für benutzerdefinierte Schrift */
+@font-face {
+  font-family: 'MeineGedownloadeteSchrift';
+  src: url('FiraSansRegular.ttf') format('woff'),
+       url('FiraSansRegular.ttf') format('truetype');
+}
+
+/* Stile für Überschriften */
+h1 {
+  font-size: 24pt;
+}
+
+h2 {
+  font-size: 16pt;
+}
+
+/* Stil für Anker (Links) */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Stil für das Logo */
+#logo {
+  width: 300px;
+  height: auto;
+}
+
+/* Stil für Tabellen */
+table {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  font-size: 12pt;
+}
+
+th {
+  border: 1px solid #000000;
+  text-align: center;
+  background-color: rgb(104, 136, 141);
+  color: #ffffff;
+  padding: 20px;
+}
+
+td {
+  border: 1px solid #000000;
+  padding: 5px 20px 5px 20px;
+}
+
+#untereZeile {
+  background-color: rgba(104, 136, 141, 0.5);
+}
+
+/* Stile für Bilder */
+img {
+  height: auto;
+  width: 33%;
+}
+
+/* Stile für den Header */
+header {
+  width: 100%;
+  border: none;
+  height: auto;
+  margin-bottom: 20px;
+  grid-area: g-header;
+}
+
+/* Stile für die Navigation */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(104, 136, 141);
+  border: none;
+  padding: 10px;
+  grid-area: g-nav;
+}
+
+/* Stile für den Hauptinhalt */
+main {
+  height: 1fr;
+  grid-area: g-main;
+}
+
+/* Allgemeine Stile für Abschnitte */
+section {
+  padding: 0px 0px 0px 20px;
+  margin: 10px 0px 10px 0px;
+}
+
+/* Stile für zusätzliche Inhalte (aside) */
+aside {
+  display: flex;
+  width: 960px;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  grid-area: g-aside;
+}
+
+/* Stile für den Footer */
+footer {
+  background-color: rgb(104, 136, 141);
+  font-size: 10pt;
+  grid-area: g-footer;
+}
+
+/* Stile für Anker (Links) im Footer */
+.sprungmarke {
+  color: rgb(104, 136, 141);
+}
+
+/* Stile für den Senden-Button */
+#submit {
+  background: #ffffff;
+  border: solid 1px #768d7f;
+  border-radius: 8px;
+  height: 32px;
+  width: 75px;
+}
+
+#submit:hover {
+  background: #251e1e;
+  color: #ffffff;
+  border: solid 1px #768d7f;
+  border-radius: 8px;
+  height: 32px;
+  width: 75px;
+}
+
+#submit:active {
+  background: #251e1e;
+  color: #ffffff;
+  border: solid 3px #adadad;
+  border-radius: 8px;
+  height: 32px;
+  width: 75px;
+}
+
+/* Stile für den Formularbereich */
+.formularteil {
+  background-color: rgb(104, 136, 141, 0.5);
+  padding: 10px 10px 10px 30px;
+  border: solid 1px #ffffff;
+  margin: 0px;
+}
+
+/* Stile für Texteingabefelder */
+input[type="text"],
+input[type="email"] {
+  height: 25px;
+  width: 300px;
+  border: none;
+}
+
+/* Stile für Checkboxen und Radio-Buttons */
+#pro {
+  border: solid 2px #ffffff;
+}
+
+/* Stile für Textbereiche */
+textarea {
+  resize: none;
+  height: 200px;
+  width: 96%;
+  border: none;
+}
+
+/* Flexbox-Stil für Formularelemente
+--> Elemente stehen hintereinander wenn Platz des Viewports ausreicht, sonst werden sie untereinander angereiht*/
+.flex {
+  display: inline-block;
+}
+
+.Hintergrund {
+  background-color: #cec4d3;
+  display: contents;
+}
+
+/*für Navigation und Footer-Links */
+nav>ul,
+footer>ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav a,
+footer a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover,
+footer a:hover {
+  background-color: #ffffff55;
+}
+
+/* Stil für Video */
+#Video {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+/* Stil für Header-Bild */
+#header {
+  width: 100%;
+  height: auto;
+}
+
+/* Stil für Labels */
+label {
+  margin-right: 100px;
+}
+
+/* Stile für die Zeichenbegrenzung */
+#Zeichenangabe {
+  font-size: 8pt;
+}
+
+/* Mobile Ansicht für kleinere Bildschirme (max-width: 960px) */
+@media screen and (max-width: 960px) {
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      " g-header"
+      " g-main "
+      " g-aside "
+      " g-footer ";
+    height: 100vh;
+  }
+
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* Mobile Ansicht für kleinere Bildschirme (max-width: 500px) */
+@media screen and (max-width: 500px) {
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      " g-header "
+      " g-main "
+      " g-aside "
+      " g-footer ";
+    height: 100vh;
+  }
+
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+}
